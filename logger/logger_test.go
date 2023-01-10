@@ -26,7 +26,7 @@ func TestLogger(t *testing.T) {
 	// write logs
 	logger.Info("some log line", "key", "value")
 	logger.Infof("some log %s", "line")
-	logger.Error("some error")
+	logger.Error("some error", "error", "some-error-message")
 
 	// assert
 	entry := capturedLogs.All()[0]

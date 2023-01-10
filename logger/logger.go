@@ -20,7 +20,7 @@ func (l *Logger) Infof(message string, args ...interface{}) {
 }
 
 func (l *Logger) Error(message string, args ...interface{}) {
-	l.sugar.Error(args...)
+	l.sugar.Errorw(message, args...)
 }
 
 func (l *Logger) GetLogger() *zap.Logger {
